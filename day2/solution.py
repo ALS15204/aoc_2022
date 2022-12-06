@@ -22,6 +22,8 @@ if __name__ == "__main__":
         getattr(OPPONENT_TO_SHAPE[line[0]], OUTCOME[line[1]]) for line in lines
     ]
     p2_points = [
-        my_shape.point + my_shape.point_against(OPPONENT_TO_SHAPE[line[0]]) for (my_shape, line) in zip(p2_my_shape, lines)
+        my_shape.point + my_shape.point_against(
+            OPPONENT_TO_SHAPE[line[0]]
+        ) for (my_shape, line) in zip(p2_my_shape, lines)
     ]
     print(f"Part Two: Total points gained is {sum(p2_points)}")
